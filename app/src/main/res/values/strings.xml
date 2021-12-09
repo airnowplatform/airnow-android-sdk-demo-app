@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Demo App</string>
+
+    <string name="title_direct_ads">Airnow Media Ads</string>
+    <string name="title_admob_mediation">AdMob Mediation</string>
+    <string name="title_mopub_mediation">MoPub Mediation</string>
+
+    <string name="button_direct_ads">Airnow Media Ads</string>
+    <string name="button_admob_mediation">AdMob Mediation</string>
+    <string name="button_mopub_mediation">MoPub Mediation</string>
+
+    <string name="sdk_version">SDK %1$s</string>
+    <string name="app_version">ver. %1$s</string>
+
+</resources>

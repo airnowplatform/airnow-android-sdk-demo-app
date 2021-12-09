@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="colorControlNormal">@color/grey</item>
+        <item name="colorControlActivated">@color/light_grey</item>
+        <item name="colorControlHighlight">@color/light_grey</item>
+
+
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:textColorPrimary">@color/textColorWhite</item>
+        <item name="android:textColor">@color/textColorWhite</item>
+
+        <item name="colorBackgroundFloating">@color/colorPrimary</item>
+        <item name="android:colorBackgroundFloating" tools:targetApi="23">@color/colorPrimary</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimaryDark</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/colorPrimaryDark</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="TextInfo">
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">@dimen/text_info_size</item>
+        <item name="android:paddingTop">@dimen/text_info_padding</item>
+        <item name="android:paddingBottom">@dimen/text_info_padding</item>
+        <item name="android:textColor">@color/textColorWhite</item>
+        <item name="android:textColorHint">@color/hintTextColorGrey</item>
+    </style>
+
+    <style name="EditTextIncreased">
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">@dimen/edit_text_increased_size</item>
+        <item name="android:paddingStart">@dimen/button_background_padding</item>
+        <item name="android:paddingLeft">@dimen/button_background_padding</item>
+        <item name="android:paddingTop">@dimen/edit_text_padding</item>
+        <item name="android:paddingBottom">@dimen/edit_text_padding</item>
+        <item name="android:textColor">@color/editTextIncreasedTextColor</item>
+        <item name="android:textColorHint">@color/hintTextColorGrey</item>
+    </style>
+
+    <style name="CardViewStyle" parent="AppTheme.NoActionBar">
+        <item name="cardCornerRadius">2dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="cardBackgroundColor">@color/card_dark_grey</item>
+    </style>
+
+    <style name="ButtonText">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColor">@color/activity_primary_text_color</item>
+        <item name="android:textColorHint">@color/hintTextColorGrey</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="RadioButton" parent="AppTheme.NoActionBar">
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@android:color/white</item>
+    </style>
+
+</resources>

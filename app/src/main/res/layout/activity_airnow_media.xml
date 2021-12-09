@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorBackground">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_top_cl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorBackground">
+
+            <include
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/layout_toolbar_demo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+            <FrameLayout
+                android:id="@+id/inline_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider">
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/in_app_banner_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="8dp"
+                android:text="In-App banner:"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inline_banner" />
+
+            <TextView
+                android:id="@+id/load_in_app_button"
+                style="@style/ButtonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="Load"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/in_app_banner_info"
+                app:layout_constraintBottom_toTopOf="@+id/in_app_banner_divider"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <View
+                android:id="@+id/in_app_banner_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/load_in_app_button"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/inline_banner_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Inline banner:"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/in_app_banner_divider" />
+
+            <TextView
+                android:id="@+id/load_inline_button"
+                style="@style/ButtonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="Load"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inline_banner_info"
+                app:layout_constraintBottom_toTopOf="@+id/inline_banner_divider"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <View
+                android:id="@+id/inline_banner_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/load_inline_button"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/interstitial_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:text="Interstitial:"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inline_banner_divider" />
+
+            <TextView
+                android:id="@+id/load_interstitial_button"
+                style="@style/ButtonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="Load"
+                app:layout_constraintEnd_toStartOf="@+id/show_interstitial_button"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/show_interstitial_button"
+                app:layout_constraintBottom_toBottomOf="@+id/show_interstitial_button"/>
+
+            <TextView
+                android:id="@+id/show_interstitial_button"
+                style="@style/ButtonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="Show"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toEndOf="@+id/load_interstitial_button"
+                app:layout_constraintTop_toBottomOf="@+id/interstitial_info"
+                app:layout_constraintBottom_toTopOf="@+id/interstitial_divider"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <View
+                android:id="@+id/interstitial_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/load_interstitial_button"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/rewarded_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:text="Rewarded:"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/interstitial_divider" />
+
+            <TextView
+                android:id="@+id/load_rewarded_button"
+                style="@style/ButtonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="Load"
+                app:layout_constraintEnd_toStartOf="@+id/show_rewarded_button"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/show_rewarded_button"
+                app:layout_constraintBottom_toBottomOf="@+id/show_rewarded_button"/>
+
+            <TextView
+                android:id="@+id/show_rewarded_button"
+                style="@style/ButtonText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="Show"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toEndOf="@+id/load_rewarded_button"
+                app:layout_constraintTop_toBottomOf="@+id/rewarded_info"
+                app:layout_constraintBottom_toTopOf="@+id/rewarded_divider"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <View
+                android:id="@+id/rewarded_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorDivider"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/load_rewarded_button"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_margin_to_screen"
+                android:layout_marginTop="@dimen/small_margin_to_screen"
+                android:layout_marginBottom="@dimen/small_margin_to_screen"
+                android:layout_gravity="start" />
+
+            <TextView
+                android:id="@+id/sdk_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/small_margin_to_screen"
+                android:layout_marginTop="@dimen/small_margin_to_screen"
+                android:layout_marginBottom="@dimen/small_margin_to_screen"
+                android:layout_gravity="end" />
+
+
+        </FrameLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
