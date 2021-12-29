@@ -15,7 +15,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
-        versionName "11.4.3"
+        versionName "11.4.4"
 
         applicationVariants.all { variant ->
             variant.outputs.all {
@@ -47,7 +47,7 @@ android {
 
 dependencies {
     // Airnow Media SDK
-    implementation ('io.github.airnowplatform:airnow-android-sdk:11.4.3')
+    implementation ('io.github.airnowplatform:airnow-android-sdk:11.4.4')
 
     // MoPub network adapter
     // Add this one for MoPub mediation only

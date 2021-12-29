@@ -25,8 +25,24 @@ class AirnowMediaActivity : AppCompatActivity(), View.OnClickListener {
 
         // Replace for your apiKey and appId
         AirnowSdk.init(this, "1638978300298486440", "471710")
+
         // Set Airnow SDK test mode
         AirnowSdk.setTestMode(true)
+
+        // Regulation Advanced Settings
+
+        // GDPR - Managing Consent
+        //AirnowSdk.setGdprConsent(AirnowConsent.ACCEPTED)
+
+        // CCPA Compliance
+        //AirnowSdk.setCcpaConsent(true)
+
+        // User-Level Settings for Child-Directed Apps with Age Gates
+        //AirnowSdk.setChildDirected(false)
+
+        // Whether or not the SDK is allowed to use personalized ads.
+        //AirnowSdk.setOptOut(this, false)
+
 
         mBinding = ActivityAirnowMediaBinding.inflate(layoutInflater)
         val view: View = mBinding.root
